@@ -8,30 +8,40 @@
 
 import UIKit
 
+enum Types: String, CaseIterable {
+    case work = "Tarea"
+    case school = "Escuela"
+    case personal = "Personal"
+}
+
 class AddHomework: UIViewController {
 
     @IBOutlet weak var titleNewHomeworkTextField: UITextField!
     @IBOutlet weak var addNewHomeworkButton: UIButton!
     @IBOutlet weak var typeNewHomeworkPicker: UIPickerView!
     
-    enum Types: String, CaseIterable{
-          case work = "Tarea"
-          case school = "Escuela"
-          case personal = "Personal"
-      }
+    private let types = Types.allCases
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
+        typeNewHomeworkPicker.dataSource = self
+        typeNewHomeworkPicker.delegate = self
     }
-        
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            return Types.allCases.count
-        }
-        
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return Types.allCases[row].rawValue
-        }
+    
+}
 
+extension AddHomework: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return types.count
+    }
+}
+
+extension AddHomework: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return types[row].rawValue
+    }
 }
