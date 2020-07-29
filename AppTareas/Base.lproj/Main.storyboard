@@ -14,16 +14,154 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6he-Sw-HVU">
+                                <rect key="frame" x="0.0" y="264" width="414" height="632"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZD-2i-gN8">
+                                <rect key="frame" x="10" y="105" width="394" height="151"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyV-uD-Szm">
+                                        <rect key="frame" x="32" y="0.0" width="42" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfc-2L-mjf">
+                                        <rect key="frame" x="292" y="0.0" width="48" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hechas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3x-uS-32V">
+                                        <rect key="frame" x="32" y="47" width="67" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Por hacer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRY-eS-zaF">
+                                        <rect key="frame" x="32" y="99" width="83" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sK-1x-ZjV">
+                                        <rect key="frame" x="292" y="98" width="48" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-iM-xKP">
+                                        <rect key="frame" x="292" y="47" width="48" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="QyV-uD-Szm" firstAttribute="leading" secondItem="kZD-2i-gN8" secondAttribute="leading" constant="32" id="5er-18-yM7"/>
+                                    <constraint firstAttribute="trailing" secondItem="mfc-2L-mjf" secondAttribute="trailing" constant="54" id="6Kc-tF-bo5"/>
+                                    <constraint firstItem="QyV-uD-Szm" firstAttribute="top" secondItem="kZD-2i-gN8" secondAttribute="top" id="Ldi-5x-gm2"/>
+                                    <constraint firstItem="mfc-2L-mjf" firstAttribute="leading" secondItem="0sK-1x-ZjV" secondAttribute="leading" id="MxX-iF-W7J"/>
+                                    <constraint firstItem="QyV-uD-Szm" firstAttribute="leading" secondItem="JRY-eS-zaF" secondAttribute="leading" id="QnI-ig-S6z"/>
+                                    <constraint firstItem="JRY-eS-zaF" firstAttribute="top" secondItem="j3x-uS-32V" secondAttribute="bottom" constant="28" id="XkX-Ud-ICc"/>
+                                    <constraint firstItem="QyV-uD-Szm" firstAttribute="baseline" secondItem="mfc-2L-mjf" secondAttribute="baseline" id="gZC-9P-Emd"/>
+                                    <constraint firstItem="QyV-uD-Szm" firstAttribute="leading" secondItem="j3x-uS-32V" secondAttribute="leading" id="geQ-2e-epc"/>
+                                    <constraint firstItem="j3x-uS-32V" firstAttribute="top" secondItem="QyV-uD-Szm" secondAttribute="bottom" constant="23" id="hmP-Pa-sgJ"/>
+                                    <constraint firstItem="mfc-2L-mjf" firstAttribute="leading" secondItem="yp2-iM-xKP" secondAttribute="leading" id="lHd-a2-nWo"/>
+                                    <constraint firstItem="yp2-iM-xKP" firstAttribute="top" secondItem="mfc-2L-mjf" secondAttribute="bottom" constant="23" id="veZ-ca-vf4"/>
+                                    <constraint firstItem="0sK-1x-ZjV" firstAttribute="top" secondItem="yp2-iM-xKP" secondAttribute="bottom" constant="27" id="vhq-8E-wcp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kZD-2i-gN8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="C6P-gj-dlp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kZD-2i-gN8" secondAttribute="trailing" constant="10" id="GPA-Xl-qNE"/>
+                            <constraint firstItem="6he-Sw-HVU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="J5Y-tb-ZvK"/>
+                            <constraint firstItem="kZD-2i-gN8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Otq-mw-t5G"/>
+                            <constraint firstAttribute="trailing" secondItem="6he-Sw-HVU" secondAttribute="trailing" id="QE8-M2-H32"/>
+                            <constraint firstAttribute="bottom" secondItem="6he-Sw-HVU" secondAttribute="bottom" id="UQD-XO-q5u"/>
+                            <constraint firstItem="kZD-2i-gN8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="nJ5-4K-Gp7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="To Do List" id="N6A-OZ-uxi">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="FZw-7h-i1Q"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="FZw-7h-i1Q">
+                            <connections>
+                                <segue destination="tgA-id-kdv" kind="show" identifier="newHomework" id="s1l-OV-G8w"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="HechasTextField" destination="j3x-uS-32V" id="eNr-dg-ih5"/>
+                        <outlet property="PorhacerTextField" destination="JRY-eS-zaF" id="nG9-FD-cNY"/>
+                        <outlet property="TotalTextField" destination="QyV-uD-Szm" id="Xmj-3l-xmS"/>
+                        <outlet property="homeworkTableView" destination="6he-Sw-HVU" id="k2J-Zq-w1L"/>
+                        <outlet property="viewCollection" destination="kZD-2i-gN8" id="mJT-vF-VaR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
+        </scene>
+        <!--New Homework-->
+        <scene sceneID="sjr-7k-B1O">
+            <objects>
+                <viewController id="tgA-id-kdv" customClass="AddHomework" customModule="AppTareas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eiq-QM-gBJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exD-KA-NGO">
+                                <rect key="frame" x="20" y="118" width="374" height="34"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5B-3e-LU3">
+                                <rect key="frame" x="20" y="177" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjI-sy-Tlo">
+                                <rect key="frame" x="14" y="344" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Add Homework"/>
+                            </button>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y2T-v1-LI3">
+                                <rect key="frame" x="20" y="219" width="374" height="97"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e5B-3e-LU3" firstAttribute="top" secondItem="exD-KA-NGO" secondAttribute="bottom" constant="56" id="NFT-r5-H6w"/>
+                            <constraint firstItem="MjI-sy-Tlo" firstAttribute="leading" secondItem="Px6-Ez-Ti3" secondAttribute="leading" constant="20" id="UAH-B9-sTd"/>
+                            <constraint firstItem="Px6-Ez-Ti3" firstAttribute="trailing" secondItem="e5B-3e-LU3" secondAttribute="trailing" constant="20" id="eqd-da-jOU"/>
+                            <constraint firstItem="Px6-Ez-Ti3" firstAttribute="trailing" secondItem="MjI-sy-Tlo" secondAttribute="trailing" constant="20" id="ffy-OI-BQC"/>
+                            <constraint firstItem="y2T-v1-LI3" firstAttribute="leading" secondItem="Px6-Ez-Ti3" secondAttribute="leading" constant="20" id="g3d-BG-M12"/>
+                            <constraint firstItem="exD-KA-NGO" firstAttribute="top" secondItem="Px6-Ez-Ti3" secondAttribute="top" constant="30" id="jWk-MW-J8b"/>
+                            <constraint firstItem="Px6-Ez-Ti3" firstAttribute="trailing" secondItem="y2T-v1-LI3" secondAttribute="trailing" constant="20" id="ltK-XY-gZZ"/>
+                            <constraint firstItem="MjI-sy-Tlo" firstAttribute="top" secondItem="y2T-v1-LI3" secondAttribute="bottom" constant="16" id="nK0-Jj-HEA"/>
+                            <constraint firstItem="y2T-v1-LI3" firstAttribute="top" secondItem="e5B-3e-LU3" secondAttribute="bottom" constant="56" id="smu-zl-lYE"/>
+                            <constraint firstItem="exD-KA-NGO" firstAttribute="leading" secondItem="Px6-Ez-Ti3" secondAttribute="leading" constant="20" id="tKe-25-iqc"/>
+                            <constraint firstItem="e5B-3e-LU3" firstAttribute="leading" secondItem="Px6-Ez-Ti3" secondAttribute="leading" constant="20" id="wlG-p7-Vai"/>
+                            <constraint firstItem="Px6-Ez-Ti3" firstAttribute="trailing" secondItem="exD-KA-NGO" secondAttribute="trailing" constant="20" id="zq7-Dw-wbg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Px6-Ez-Ti3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Homework" id="PW5-SP-UvJ"/>
+                    <connections>
+                        <outlet property="addNewHomeworkButton" destination="MjI-sy-Tlo" id="3uf-yi-R1S"/>
+                        <outlet property="titleNewHomeworkTextField" destination="exD-KA-NGO" id="CgJ-JW-vaG"/>
+                        <outlet property="typeNewHomeworkPicker" destination="y2T-v1-LI3" id="nqm-oT-IFH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHL-C9-ES1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911.594202898551" y="138.61607142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wDe-4N-b7N">

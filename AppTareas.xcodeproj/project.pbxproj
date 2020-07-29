@@ -15,6 +15,9 @@
 		D0733A1724D0D17600F596B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0733A1524D0D17600F596B7 /* LaunchScreen.storyboard */; };
 		D0733A2024D1C53800F596B7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0733A1E24D1C53700F596B7 /* Model.xcdatamodeld */; };
 		D0733A2224D1C8BF00F596B7 /* CoreDataManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = D0733A2124D1C8BF00F596B7 /* CoreDataManager .swift */; };
+		D0733A2824D1EF9600F596B7 /* HomeworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0733A2624D1EF9600F596B7 /* HomeworkTableViewCell.swift */; };
+		D0733A2924D1EF9600F596B7 /* HomeworkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0733A2724D1EF9600F596B7 /* HomeworkTableViewCell.xib */; };
+		D0733A2B24D1F85900F596B7 /* AddHomework.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0733A2A24D1F85900F596B7 /* AddHomework.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		D0733A1824D0D17600F596B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0733A1F24D1C53800F596B7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D0733A2124D1C8BF00F596B7 /* CoreDataManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager .swift"; sourceTree = "<group>"; };
+		D0733A2624D1EF9600F596B7 /* HomeworkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkTableViewCell.swift; sourceTree = "<group>"; };
+		D0733A2724D1EF9600F596B7 /* HomeworkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeworkTableViewCell.xib; sourceTree = "<group>"; };
+		D0733A2A24D1F85900F596B7 /* AddHomework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHomework.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +66,11 @@
 		D0733A0924D0D16D00F596B7 /* AppTareas */ = {
 			isa = PBXGroup;
 			children = (
+				D0733A2324D1ED2200F596B7 /* Cell */,
 				D0733A0A24D0D16D00F596B7 /* AppDelegate.swift */,
 				D0733A0C24D0D16D00F596B7 /* SceneDelegate.swift */,
 				D0733A0E24D0D16D00F596B7 /* ViewController.swift */,
+				D0733A2A24D1F85900F596B7 /* AddHomework.swift */,
 				D0733A1024D0D16E00F596B7 /* Main.storyboard */,
 				D0733A1324D0D17600F596B7 /* Assets.xcassets */,
 				D0733A1524D0D17600F596B7 /* LaunchScreen.storyboard */,
@@ -71,6 +79,15 @@
 				D0733A2124D1C8BF00F596B7 /* CoreDataManager .swift */,
 			);
 			path = AppTareas;
+			sourceTree = "<group>";
+		};
+		D0733A2324D1ED2200F596B7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D0733A2624D1EF9600F596B7 /* HomeworkTableViewCell.swift */,
+				D0733A2724D1EF9600F596B7 /* HomeworkTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0733A1724D0D17600F596B7 /* LaunchScreen.storyboard in Resources */,
+				D0733A2924D1EF9600F596B7 /* HomeworkTableViewCell.xib in Resources */,
 				D0733A1424D0D17600F596B7 /* Assets.xcassets in Resources */,
 				D0733A1224D0D16E00F596B7 /* Main.storyboard in Resources */,
 			);
@@ -144,7 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0733A2B24D1F85900F596B7 /* AddHomework.swift in Sources */,
 				D0733A2224D1C8BF00F596B7 /* CoreDataManager .swift in Sources */,
+				D0733A2824D1EF9600F596B7 /* HomeworkTableViewCell.swift in Sources */,
 				D0733A0F24D0D16D00F596B7 /* ViewController.swift in Sources */,
 				D0733A0B24D0D16D00F596B7 /* AppDelegate.swift in Sources */,
 				D0733A0D24D0D16D00F596B7 /* SceneDelegate.swift in Sources */,
