@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ad4-Ub-vCX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ad4-Ub-vCX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -100,7 +100,10 @@
                         <outlet property="HechasTextField" destination="j3x-uS-32V" id="eNr-dg-ih5"/>
                         <outlet property="PorhacerTextField" destination="JRY-eS-zaF" id="nG9-FD-cNY"/>
                         <outlet property="TotalTextField" destination="QyV-uD-Szm" id="Xmj-3l-xmS"/>
+                        <outlet property="hechasHomeworksTextField" destination="yp2-iM-xKP" id="wjg-ju-KIJ"/>
                         <outlet property="homeworkTableView" destination="6he-Sw-HVU" id="k2J-Zq-w1L"/>
+                        <outlet property="porhcaerHomeworksTextField" destination="0sK-1x-ZjV" id="c4g-AY-oY1"/>
+                        <outlet property="totalHomeworksTextField" destination="mfc-2L-mjf" id="jSC-dI-Zjg"/>
                         <outlet property="viewCollection" destination="kZD-2i-gN8" id="mJT-vF-VaR"/>
                     </connections>
                 </viewController>
@@ -131,6 +134,9 @@
                                 <rect key="frame" x="144.5" y="447" width="125" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Add Homework"/>
+                                <connections>
+                                    <action selector="addhomework:" destination="tgA-id-kdv" eventType="touchUpInside" id="H5p-CI-2vW"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2T-v1-LI3">
                                 <rect key="frame" x="20" y="219" width="374" height="200"/>
@@ -157,14 +163,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Homework" id="PW5-SP-UvJ"/>
                     <connections>
-                        <outlet property="addNewHomeworkButton" destination="MjI-sy-Tlo" id="3uf-yi-R1S"/>
                         <outlet property="titleNewHomeworkTextField" destination="exD-KA-NGO" id="CgJ-JW-vaG"/>
                         <outlet property="typeNewHomeworkPicker" destination="y2T-v1-LI3" id="nqm-oT-IFH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHL-C9-ES1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911.594202898551" y="138.61607142857142"/>
+            <point key="canvasLocation" x="2022" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wDe-4N-b7N">

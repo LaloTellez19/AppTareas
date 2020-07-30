@@ -15,19 +15,47 @@ enum Types: String, CaseIterable {
 }
 
 class AddHomework: UIViewController {
-
+    var typeSelecionado = ""
+    private let manager = CoreDataManager()
     @IBOutlet weak var titleNewHomeworkTextField: UITextField!
-    @IBOutlet weak var addNewHomeworkButton: UIButton!
+    
     @IBOutlet weak var typeNewHomeworkPicker: UIPickerView!
     
+    @IBAction func addhomework(_ sender: Any)
+    {
+        
+        let date = Date()
+        let dateFormetter = DateFormatter()
+        dateFormetter.dateStyle = .medium
+        let dateiniAdd = dateFormetter.string(from: date)
+        let titleAdd: String = titleNewHomeworkTextField.text!
+        let typeAdd:String = typeSelecionado
+        manager.createHomework(titulo: titleAdd, tipo: typeAdd, status: true, fecha_creacion: dateiniAdd, fecha_final: ""){}
+        
+    }
     private let types = Types.allCases
     
     override func viewDidLoad() {
         super.viewDidLoad()
         typeNewHomeworkPicker.dataSource = self
         typeNewHomeworkPicker.delegate = self
+        initizalaHideKeyboad()
     }
     
+}
+
+extension AddHomework{
+    
+    func initizalaHideKeyboad()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissMyKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissMyKeyboard(){
+        view.endEditing(true)
+    }
 }
 
 extension AddHomework: UIPickerViewDataSource {
@@ -37,6 +65,11 @@ extension AddHomework: UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return types.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        typeSelecionado = types[row].rawValue
+        
     }
 }
 

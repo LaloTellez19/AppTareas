@@ -29,14 +29,15 @@ class CoreDataManager{
             print("Error loading store \(desc) -\(error)")
             return
         }
-        print("Ya se conecto werito jaja")
+        print("conexion exitosa")
+            
     }
 }
 
     
     //Crear y guardar registros
     //1. Crear nueva funcion con los parametros que se usaran
-    func createHomework(titulo : String, tipo : String, status : Bool, fecha_creacion : Date, fecha_final : Date, completion: @escaping() -> Void)
+    func createHomework(titulo : String, tipo : String, status : Bool, fecha_creacion : String, fecha_final : String, completion: @escaping() -> Void)
     {
         //Crear container
         let context = container.viewContext
@@ -74,7 +75,7 @@ class CoreDataManager{
             }
                 catch
         {
-            print("El error obteniendo usuario(s) \(error)")
+            print("El error obteniendo tarea(s) \(error)")
          }
      
           //3
