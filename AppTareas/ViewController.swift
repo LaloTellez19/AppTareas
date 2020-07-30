@@ -8,7 +8,7 @@
 
 import UIKit
 private let manager = CoreDataManager()
-let homeworks = manager.fetchHomeowrks()
+var homeworks = manager.fetchHomeowrks()
 class ViewController: UIViewController {
     
     @IBOutlet weak var homeworkTableView: UITableView!
@@ -30,6 +30,10 @@ class ViewController: UIViewController {
         homeworkTableView.dataSource = self
         totalHomeworksTextField.text = String(homeworks.count)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     

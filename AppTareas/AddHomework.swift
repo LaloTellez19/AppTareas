@@ -31,7 +31,7 @@ class AddHomework: UIViewController {
         let titleAdd: String = titleNewHomeworkTextField.text!
         let typeAdd:String = typeSelecionado
         manager.createHomework(titulo: titleAdd, tipo: typeAdd, status: true, fecha_creacion: dateiniAdd, fecha_final: ""){}
-        
+        self.navigationController?.popViewController(animated: true)
     }
     private let types = Types.allCases
     
