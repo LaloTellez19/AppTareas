@@ -16,7 +16,7 @@ enum Types: String, CaseIterable {
 
 class AddHomework: UIViewController {
     var typeSelecionado = ""
-    private let manager = CoreDataManager()
+    private let manager = CoreDataManager.shared
     @IBOutlet weak var titleNewHomeworkTextField: UITextField!
     
     @IBOutlet weak var typeNewHomeworkPicker: UIPickerView!
@@ -30,8 +30,12 @@ class AddHomework: UIViewController {
         let dateiniAdd = dateFormetter.string(from: date)
         let titleAdd: String = titleNewHomeworkTextField.text!
         let typeAdd:String = typeSelecionado
-        manager.createHomework(titulo: titleAdd, tipo: typeAdd, status: true, fecha_creacion: dateiniAdd, fecha_final: ""){}
-        self.navigationController?.popViewController(animated: true)
+        manager.createHomework(titulo: titleAdd, tipo: typeAdd, status: true, fecha_creacion: dateiniAdd, fecha_final: "") {
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+        
     }
     private let types = Types.allCases
     

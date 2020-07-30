@@ -7,8 +7,7 @@
 //
 
 import UIKit
-private let manager = CoreDataManager()
-var homeworks = manager.fetchHomeowrks()
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var homeworkTableView: UITableView!
@@ -22,6 +21,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var porhcaerHomeworksTextField: UILabel!
     @IBOutlet weak var hechasHomeworksTextField: UILabel!
     
+    private let manager = CoreDataManager.shared
+    private var homeworks: [Homeworks] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -29,19 +31,21 @@ class ViewController: UIViewController {
                                    forCellReuseIdentifier: "HomeworkTableViewCell")
         homeworkTableView.dataSource = self
         totalHomeworksTextField.text = String(homeworks.count)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        loadHomeWorks()
     }
-    
-    
-    
+
+    private func loadHomeWorks() {
+        homeworks = manager.fetchHomeowrks()
+        homeworkTableView.reloadData()
+    }
 }
 
 
-extension ViewController: UITableViewDataSource{
+extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return homeworks.count
     }
@@ -49,7 +53,6 @@ extension ViewController: UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeworkTableViewCell",
                                                  for: indexPath)
-        
         if let newCell = cell as? HomeworkTableViewCell {
             DispatchQueue.main.async {
                 newCell.setupCell(title: "Tarea 1", type: "Trabajo", dateini: "29-07-2020", dateFinal: "30-07-2020", status: false)
