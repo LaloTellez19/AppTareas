@@ -16,10 +16,16 @@ class HomeworkTableViewCell: UITableViewCell {
     @IBOutlet weak var fechafinalTextField: UILabel!
     @IBOutlet weak var fechaCreacionTextField: UILabel!
     
+    @IBAction func switchStatus(_ sender: UISwitch) {
+        delegate.cambioSwith(estaprendido: sender.isOn, index: index)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    var delegate: cambioCelda!
+    var index: Int!
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -31,8 +37,12 @@ class HomeworkTableViewCell: UITableViewCell {
     {
         tituloCellTextFeld.text = title
         tipoCellTextField.text = type
-        fechafinalTextField.text = dateini
-        fechaCreacionTextField.text = dateFinal
+        fechaCreacionTextField.text = dateini
+        fechafinalTextField.text = dateFinal
+        //statusSwitch.isOn = status
     }
-    
+}
+
+protocol  cambioCelda{
+func cambioSwith(estaprendido: Bool, index: Int)
 }

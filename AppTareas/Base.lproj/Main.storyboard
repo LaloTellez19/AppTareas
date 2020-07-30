@@ -92,7 +92,7 @@
                     <navigationItem key="navigationItem" title="To Do List" id="N6A-OZ-uxi">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="FZw-7h-i1Q">
                             <connections>
-                                <segue destination="tgA-id-kdv" kind="show" identifier="newHomework" id="s1l-OV-G8w"/>
+                                <action selector="newHome:" destination="BYZ-38-t0r" id="0Oy-eW-zk6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -114,24 +114,24 @@
         <!--New Homework-->
         <scene sceneID="sjr-7k-B1O">
             <objects>
-                <viewController id="tgA-id-kdv" customClass="AddHomework" customModule="AppTareas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cambio" id="tgA-id-kdv" customClass="AddHomework" customModule="AppTareas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eiq-QM-gBJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exD-KA-NGO">
-                                <rect key="frame" x="20" y="118" width="374" height="34"/>
+                                <rect key="frame" x="20" y="74" width="374" height="34"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5B-3e-LU3">
-                                <rect key="frame" x="20" y="177" width="374" height="21"/>
+                                <rect key="frame" x="20" y="133" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjI-sy-Tlo">
-                                <rect key="frame" x="144.5" y="447" width="125" height="34"/>
+                                <rect key="frame" x="144.5" y="403" width="125" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Add Homework"/>
                                 <connections>
@@ -139,7 +139,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2T-v1-LI3">
-                                <rect key="frame" x="20" y="219" width="374" height="200"/>
+                                <rect key="frame" x="20" y="175" width="374" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="2m9-EO-0xb"/>
                                 </constraints>

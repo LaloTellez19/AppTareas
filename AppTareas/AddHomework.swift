@@ -17,24 +17,35 @@ enum Types: String, CaseIterable {
 class AddHomework: UIViewController {
     var typeSelecionado = ""
     private let manager = CoreDataManager.shared
+    var delegate: CambioPantalla!
     @IBOutlet weak var titleNewHomeworkTextField: UITextField!
     
     @IBOutlet weak var typeNewHomeworkPicker: UIPickerView!
     
     @IBAction func addhomework(_ sender: Any)
     {
-        
-        let date = Date()
-        let dateFormetter = DateFormatter()
-        dateFormetter.dateStyle = .medium
-        let dateiniAdd = dateFormetter.string(from: date)
-        let titleAdd: String = titleNewHomeworkTextField.text!
-        let typeAdd:String = typeSelecionado
-        manager.createHomework(titulo: titleAdd, tipo: typeAdd, status: true, fecha_creacion: dateiniAdd, fecha_final: "") {
-            DispatchQueue.main.async {
-                self.navigationController?.popViewController(animated: true)
+        if let text = titleNewHomeworkTextField.text, text.isEmpty
+        {
+            let alert = UIAlertController(title: "Campo Vacio", message: "Ingrese el nombre de la tarea", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
+        else
+        {
+            let date = Date()
+            let dateFormetter = DateFormatter()
+            dateFormetter.dateStyle = .medium
+            let dateiniAdd = dateFormetter.string(from: date)
+            let titleAdd: String = titleNewHomeworkTextField.text!
+            let typeAdd:String = typeSelecionado
+            manager.createHomework(titulo: titleAdd, tipo: typeAdd, status: true, fecha_creacion: dateiniAdd, fecha_final: "") {
+                self.delegate.cambio()
+                DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
+                }
             }
         }
+        
         
     }
     private let types = Types.allCases
@@ -48,6 +59,7 @@ class AddHomework: UIViewController {
     
 }
 
+//teclado
 extension AddHomework{
     
     func initizalaHideKeyboad()
@@ -62,6 +74,7 @@ extension AddHomework{
     }
 }
 
+//enum de picker
 extension AddHomework: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -82,3 +95,4 @@ extension AddHomework: UIPickerViewDelegate {
         return types[row].rawValue
     }
 }
+
