@@ -118,6 +118,15 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		D0554CFC24E4B1DD00AABCD9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0733A1E24D1C53700F596B7 /* Model.xcdatamodeld */,
+				D0733A2124D1C8BF00F596B7 /* CoreDataManager .swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D0595E7E24E3175A00F783F4 /* addHomeworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +158,7 @@
 		D0595E8324E3175A00F783F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D0733A2324D1ED2200F596B7 /* Cell */,
 				D0733A2A24D1F85900F596B7 /* addHomework.swift */,
 				D05BFAFC24E4527A00096625 /* addHomework.storyboard */,
 			);
@@ -190,16 +200,14 @@
 		D0733A0924D0D16D00F596B7 /* AppTareas */ = {
 			isa = PBXGroup;
 			children = (
+				D0554CFC24E4B1DD00AABCD9 /* Entity */,
 				D0595E7E24E3175A00F783F4 /* addHomeworks */,
 				D03E911524E2F4720018D612 /* getData */,
-				D0733A2324D1ED2200F596B7 /* Cell */,
 				D0733A0A24D0D16D00F596B7 /* AppDelegate.swift */,
 				D0733A0C24D0D16D00F596B7 /* SceneDelegate.swift */,
 				D0733A1324D0D17600F596B7 /* Assets.xcassets */,
 				D0733A1524D0D17600F596B7 /* LaunchScreen.storyboard */,
 				D0733A1824D0D17600F596B7 /* Info.plist */,
-				D0733A1E24D1C53700F596B7 /* Model.xcdatamodeld */,
-				D0733A2124D1C8BF00F596B7 /* CoreDataManager .swift */,
 			);
 			path = AppTareas;
 			sourceTree = "<group>";

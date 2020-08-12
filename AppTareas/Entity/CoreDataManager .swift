@@ -9,7 +9,6 @@
 import Foundation
 //1.- Importamos el framework de Core Data para acceder a su API
 import CoreData
-
 class CoreDataManager {
     static let shared = CoreDataManager()
     //2.- Creamos una propiedad llamada container de tipo NSPersistentContainer que utilizaremos en los diferentes métodos de la clase.
@@ -21,19 +20,18 @@ class CoreDataManager {
         setupDatabase()
     }
     
-    
-  private func setupDatabase() {
+    private func setupDatabase() {
         //4.- El método loadPersistentStores se encarga de inicializar y completar el Core Data Stack
         container.loadPersistentStores { (desc, error) in
-        if let error = error {
-            print("Error loading store \(desc) -\(error)")
-            return
-        }
-        print("conexion exitosa")
+            if let error = error {
+                print("Error loading store \(desc) -\(error)")
+                return
+            }
+            print("conexion exitosa")
             
+        }
     }
-}
-
+    
     
     //Crear y guardar registros
     //1. Crear nueva funcion con los parametros que se usaran
@@ -41,7 +39,6 @@ class CoreDataManager {
     {
         //Crear container
         let context = container.viewContext
-        
         //crear objeto homework asignando los parametros
         let homework = Homeworks(context: context)
         homework.titulo = titulo
@@ -49,7 +46,6 @@ class CoreDataManager {
         homework.status = status
         homework.fecha_creacion = fecha_creacion
         homework.fecha_final = fecha_final
-        
         //save
         do{
             try context.save()
@@ -60,33 +56,29 @@ class CoreDataManager {
         }
         
     }
-
-    
     
     //Obtener registros dentro de la base
-   func fetchHomeowrks() -> [Homeworks] {
+    func fetchHomeowrks() -> [Homeworks] {
         //1.- Obtenemos un objeto NSFetchRequest
         let fetchRequest : NSFetchRequest<Homeworks> = Homeworks.fetchRequest()
         do {
-      
+            
             //2.- Invocamos el método fetch del viewContext del contenedor para obtener un arreglo de usuarios,
             let result = try container.viewContext.fetch(fetchRequest)
             return result
-            }
-                catch
+        }
+        catch
         {
             print("El error obteniendo tarea(s) \(error)")
-         }
-     
-          //3
-         return []
+        }
+        
+        //3
+        return []
     }
-    
-    
     //Actualizar status
     func updateStatus(status: Bool)
     {
-       
+        
     }
-
+    
 }
