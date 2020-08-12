@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Homework-->
+        <scene sceneID="KUH-9e-ecU">
+            <objects>
+                <viewController storyboardIdentifier="nuevaTarea" id="tQg-Ng-fo0" customClass="AddHomework" customModule="AppTareas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wbg-Mt-DXh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pKK-C2-tLi">
+                                <rect key="frame" x="20" y="74" width="374" height="34"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lB-94-ioG">
+                                <rect key="frame" x="20" y="133" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="552-mi-646">
+                                <rect key="frame" x="144.5" y="403" width="125" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Add Homework"/>
+                                <connections>
+                                    <action selector="addhomework:" destination="tQg-Ng-fo0" eventType="touchUpInside" id="ygF-FJ-22v"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXc-6s-KjW">
+                                <rect key="frame" x="20" y="175" width="374" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="rrp-8C-rI8"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Y3f-xs-du3" firstAttribute="trailing" secondItem="5lB-94-ioG" secondAttribute="trailing" constant="20" id="1J4-dD-ynX"/>
+                            <constraint firstItem="552-mi-646" firstAttribute="centerX" secondItem="Wbg-Mt-DXh" secondAttribute="centerX" id="566-ht-sq2"/>
+                            <constraint firstItem="552-mi-646" firstAttribute="top" secondItem="OXc-6s-KjW" secondAttribute="bottom" constant="28" id="5i4-vs-GhS"/>
+                            <constraint firstItem="OXc-6s-KjW" firstAttribute="leading" secondItem="Y3f-xs-du3" secondAttribute="leading" constant="20" id="GQs-xc-Xoi"/>
+                            <constraint firstItem="5lB-94-ioG" firstAttribute="top" secondItem="pKK-C2-tLi" secondAttribute="bottom" constant="25" id="HS1-OA-YM0"/>
+                            <constraint firstItem="OXc-6s-KjW" firstAttribute="top" secondItem="5lB-94-ioG" secondAttribute="bottom" constant="21" id="KYL-uu-8wa"/>
+                            <constraint firstItem="5lB-94-ioG" firstAttribute="leading" secondItem="Y3f-xs-du3" secondAttribute="leading" constant="20" id="how-ib-9wV"/>
+                            <constraint firstItem="Y3f-xs-du3" firstAttribute="trailing" secondItem="OXc-6s-KjW" secondAttribute="trailing" constant="20" id="kjP-Sl-SHV"/>
+                            <constraint firstItem="pKK-C2-tLi" firstAttribute="leading" secondItem="Y3f-xs-du3" secondAttribute="leading" constant="20" id="mx4-yo-4Kf"/>
+                            <constraint firstItem="Y3f-xs-du3" firstAttribute="trailing" secondItem="pKK-C2-tLi" secondAttribute="trailing" constant="20" id="qSd-DY-aRX"/>
+                            <constraint firstItem="pKK-C2-tLi" firstAttribute="top" secondItem="Y3f-xs-du3" secondAttribute="top" constant="30" id="r1v-bd-gIR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y3f-xs-du3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Homework" id="syS-sK-gH3"/>
+                    <connections>
+                        <outlet property="titleNewHomeworkTextField" destination="pKK-C2-tLi" id="TjW-qR-Tev"/>
+                        <outlet property="typeNewHomeworkPicker" destination="OXc-6s-KjW" id="MOu-y5-DPr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ok4-sa-tzJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2022" y="139"/>
+        </scene>
+    </scenes>
+</document>

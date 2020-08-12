@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D03E912024E2F4720018D612 /* getDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E911724E2F4720018D612 /* getDataPresenter.swift */; };
+		D03E912124E2F4720018D612 /* getDataWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E911924E2F4720018D612 /* getDataWireFrame.swift */; };
+		D03E912324E2F4720018D612 /* getDataProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E911D24E2F4720018D612 /* getDataProtocols.swift */; };
+		D03E912424E2F4720018D612 /* getDataInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E911F24E2F4720018D612 /* getDataInteractor.swift */; };
+		D0595E8924E3175A00F783F4 /* addHomeworksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0595E8024E3175A00F783F4 /* addHomeworksPresenter.swift */; };
+		D0595E8A24E3175A00F783F4 /* addHomeworksWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0595E8224E3175A00F783F4 /* addHomeworksWireFrame.swift */; };
+		D0595E8C24E3175A00F783F4 /* addHomeworksProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0595E8624E3175A00F783F4 /* addHomeworksProtocols.swift */; };
+		D0595E8D24E3175A00F783F4 /* addHomeworksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0595E8824E3175A00F783F4 /* addHomeworksInteractor.swift */; };
+		D05BFAFD24E4527A00096625 /* addHomework.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05BFAFC24E4527A00096625 /* addHomework.storyboard */; };
 		D0733A0B24D0D16D00F596B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0733A0A24D0D16D00F596B7 /* AppDelegate.swift */; };
 		D0733A0D24D0D16D00F596B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0733A0C24D0D16D00F596B7 /* SceneDelegate.swift */; };
 		D0733A0F24D0D16D00F596B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0733A0E24D0D16D00F596B7 /* ViewController.swift */; };
@@ -17,10 +26,19 @@
 		D0733A2224D1C8BF00F596B7 /* CoreDataManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = D0733A2124D1C8BF00F596B7 /* CoreDataManager .swift */; };
 		D0733A2824D1EF9600F596B7 /* HomeworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0733A2624D1EF9600F596B7 /* HomeworkTableViewCell.swift */; };
 		D0733A2924D1EF9600F596B7 /* HomeworkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0733A2724D1EF9600F596B7 /* HomeworkTableViewCell.xib */; };
-		D0733A2B24D1F85900F596B7 /* AddHomework.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0733A2A24D1F85900F596B7 /* AddHomework.swift */; };
+		D0733A2B24D1F85900F596B7 /* addHomework.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0733A2A24D1F85900F596B7 /* addHomework.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D03E911724E2F4720018D612 /* getDataPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getDataPresenter.swift; sourceTree = "<group>"; };
+		D03E911924E2F4720018D612 /* getDataWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getDataWireFrame.swift; sourceTree = "<group>"; };
+		D03E911D24E2F4720018D612 /* getDataProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getDataProtocols.swift; sourceTree = "<group>"; };
+		D03E911F24E2F4720018D612 /* getDataInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getDataInteractor.swift; sourceTree = "<group>"; };
+		D0595E8024E3175A00F783F4 /* addHomeworksPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addHomeworksPresenter.swift; sourceTree = "<group>"; };
+		D0595E8224E3175A00F783F4 /* addHomeworksWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addHomeworksWireFrame.swift; sourceTree = "<group>"; };
+		D0595E8624E3175A00F783F4 /* addHomeworksProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addHomeworksProtocols.swift; sourceTree = "<group>"; };
+		D0595E8824E3175A00F783F4 /* addHomeworksInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addHomeworksInteractor.swift; sourceTree = "<group>"; };
+		D05BFAFC24E4527A00096625 /* addHomework.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addHomework.storyboard; sourceTree = "<group>"; };
 		D0733A0724D0D16D00F596B7 /* AppTareas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTareas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0733A0A24D0D16D00F596B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0733A0C24D0D16D00F596B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +51,7 @@
 		D0733A2124D1C8BF00F596B7 /* CoreDataManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataManager .swift"; sourceTree = "<group>"; };
 		D0733A2624D1EF9600F596B7 /* HomeworkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkTableViewCell.swift; sourceTree = "<group>"; };
 		D0733A2724D1EF9600F596B7 /* HomeworkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeworkTableViewCell.xib; sourceTree = "<group>"; };
-		D0733A2A24D1F85900F596B7 /* AddHomework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHomework.swift; sourceTree = "<group>"; };
+		D0733A2A24D1F85900F596B7 /* addHomework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addHomework.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +65,112 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D03E911524E2F4720018D612 /* getData */ = {
+			isa = PBXGroup;
+			children = (
+				D03E911624E2F4720018D612 /* Presenter */,
+				D03E911824E2F4720018D612 /* WireFrame */,
+				D03E911A24E2F4720018D612 /* View */,
+				D03E911C24E2F4720018D612 /* Protocols */,
+				D03E911E24E2F4720018D612 /* Interactor */,
+			);
+			path = getData;
+			sourceTree = "<group>";
+		};
+		D03E911624E2F4720018D612 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D03E911724E2F4720018D612 /* getDataPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D03E911824E2F4720018D612 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				D03E911924E2F4720018D612 /* getDataWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		D03E911A24E2F4720018D612 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0733A1024D0D16E00F596B7 /* Main.storyboard */,
+				D0733A0E24D0D16D00F596B7 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D03E911C24E2F4720018D612 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D03E911D24E2F4720018D612 /* getDataProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D03E911E24E2F4720018D612 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D03E911F24E2F4720018D612 /* getDataInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D0595E7E24E3175A00F783F4 /* addHomeworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0595E8324E3175A00F783F4 /* View */,
+				D0595E8724E3175A00F783F4 /* Interactor */,
+				D0595E7F24E3175A00F783F4 /* Presenter */,
+				D0595E8124E3175A00F783F4 /* WireFrame */,
+				D0595E8524E3175A00F783F4 /* Protocols */,
+			);
+			path = addHomeworks;
+			sourceTree = "<group>";
+		};
+		D0595E7F24E3175A00F783F4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D0595E8024E3175A00F783F4 /* addHomeworksPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D0595E8124E3175A00F783F4 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				D0595E8224E3175A00F783F4 /* addHomeworksWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		D0595E8324E3175A00F783F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0733A2A24D1F85900F596B7 /* addHomework.swift */,
+				D05BFAFC24E4527A00096625 /* addHomework.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0595E8524E3175A00F783F4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D0595E8624E3175A00F783F4 /* addHomeworksProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D0595E8724E3175A00F783F4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D0595E8824E3175A00F783F4 /* addHomeworksInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		D07339FE24D0D16D00F596B7 = {
 			isa = PBXGroup;
 			children = (
@@ -66,12 +190,11 @@
 		D0733A0924D0D16D00F596B7 /* AppTareas */ = {
 			isa = PBXGroup;
 			children = (
+				D0595E7E24E3175A00F783F4 /* addHomeworks */,
+				D03E911524E2F4720018D612 /* getData */,
 				D0733A2324D1ED2200F596B7 /* Cell */,
 				D0733A0A24D0D16D00F596B7 /* AppDelegate.swift */,
 				D0733A0C24D0D16D00F596B7 /* SceneDelegate.swift */,
-				D0733A0E24D0D16D00F596B7 /* ViewController.swift */,
-				D0733A2A24D1F85900F596B7 /* AddHomework.swift */,
-				D0733A1024D0D16E00F596B7 /* Main.storyboard */,
 				D0733A1324D0D17600F596B7 /* Assets.xcassets */,
 				D0733A1524D0D17600F596B7 /* LaunchScreen.storyboard */,
 				D0733A1824D0D17600F596B7 /* Info.plist */,
@@ -152,6 +275,7 @@
 				D0733A2924D1EF9600F596B7 /* HomeworkTableViewCell.xib in Resources */,
 				D0733A1424D0D17600F596B7 /* Assets.xcassets in Resources */,
 				D0733A1224D0D16E00F596B7 /* Main.storyboard in Resources */,
+				D05BFAFD24E4527A00096625 /* addHomework.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,13 +286,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0733A2B24D1F85900F596B7 /* AddHomework.swift in Sources */,
+				D0595E8A24E3175A00F783F4 /* addHomeworksWireFrame.swift in Sources */,
+				D03E912124E2F4720018D612 /* getDataWireFrame.swift in Sources */,
+				D0733A2B24D1F85900F596B7 /* addHomework.swift in Sources */,
 				D0733A2224D1C8BF00F596B7 /* CoreDataManager .swift in Sources */,
+				D03E912324E2F4720018D612 /* getDataProtocols.swift in Sources */,
 				D0733A2824D1EF9600F596B7 /* HomeworkTableViewCell.swift in Sources */,
+				D03E912024E2F4720018D612 /* getDataPresenter.swift in Sources */,
 				D0733A0F24D0D16D00F596B7 /* ViewController.swift in Sources */,
 				D0733A0B24D0D16D00F596B7 /* AppDelegate.swift in Sources */,
 				D0733A0D24D0D16D00F596B7 /* SceneDelegate.swift in Sources */,
+				D0595E8D24E3175A00F783F4 /* addHomeworksInteractor.swift in Sources */,
 				D0733A2024D1C53800F596B7 /* Model.xcdatamodeld in Sources */,
+				D0595E8C24E3175A00F783F4 /* addHomeworksProtocols.swift in Sources */,
+				D0595E8924E3175A00F783F4 /* addHomeworksPresenter.swift in Sources */,
+				D03E912424E2F4720018D612 /* getDataInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

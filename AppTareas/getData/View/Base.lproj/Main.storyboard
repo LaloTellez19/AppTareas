@@ -10,7 +10,7 @@
         <!--To Do List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppTareas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="BYZ-38-t0r" customClass="ViewController" customModule="AppTareas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,79 +97,19 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="HechasTextField" destination="j3x-uS-32V" id="eNr-dg-ih5"/>
-                        <outlet property="PorhacerTextField" destination="JRY-eS-zaF" id="nG9-FD-cNY"/>
-                        <outlet property="TotalTextField" destination="QyV-uD-Szm" id="Xmj-3l-xmS"/>
                         <outlet property="hechasHomeworksTextField" destination="yp2-iM-xKP" id="wjg-ju-KIJ"/>
+                        <outlet property="hechasTextField" destination="j3x-uS-32V" id="F5i-kS-oMe"/>
                         <outlet property="homeworkTableView" destination="6he-Sw-HVU" id="k2J-Zq-w1L"/>
+                        <outlet property="porhacerTextFied" destination="JRY-eS-zaF" id="ChB-k5-bCH"/>
                         <outlet property="porhcaerHomeworksTextField" destination="0sK-1x-ZjV" id="c4g-AY-oY1"/>
                         <outlet property="totalHomeworksTextField" destination="mfc-2L-mjf" id="jSC-dI-Zjg"/>
+                        <outlet property="totalTextField" destination="QyV-uD-Szm" id="lDB-tH-6u7"/>
                         <outlet property="viewCollection" destination="kZD-2i-gN8" id="mJT-vF-VaR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
-        </scene>
-        <!--New Homework-->
-        <scene sceneID="sjr-7k-B1O">
-            <objects>
-                <viewController storyboardIdentifier="cambio" id="tgA-id-kdv" customClass="AddHomework" customModule="AppTareas" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eiq-QM-gBJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exD-KA-NGO">
-                                <rect key="frame" x="20" y="74" width="374" height="34"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5B-3e-LU3">
-                                <rect key="frame" x="20" y="133" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjI-sy-Tlo">
-                                <rect key="frame" x="144.5" y="403" width="125" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Add Homework"/>
-                                <connections>
-                                    <action selector="addhomework:" destination="tgA-id-kdv" eventType="touchUpInside" id="H5p-CI-2vW"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2T-v1-LI3">
-                                <rect key="frame" x="20" y="175" width="374" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="2m9-EO-0xb"/>
-                                </constraints>
-                            </pickerView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="MjI-sy-Tlo" firstAttribute="centerX" secondItem="eiq-QM-gBJ" secondAttribute="centerX" id="Jhm-Ti-UdP"/>
-                            <constraint firstItem="e5B-3e-LU3" firstAttribute="top" secondItem="exD-KA-NGO" secondAttribute="bottom" constant="25" id="NFT-r5-H6w"/>
-                            <constraint firstItem="Px6-Ez-Ti3" firstAttribute="trailing" secondItem="e5B-3e-LU3" secondAttribute="trailing" constant="20" id="eqd-da-jOU"/>
-                            <constraint firstItem="y2T-v1-LI3" firstAttribute="leading" secondItem="Px6-Ez-Ti3" secondAttribute="leading" constant="20" id="g3d-BG-M12"/>
-                            <constraint firstItem="exD-KA-NGO" firstAttribute="top" secondItem="Px6-Ez-Ti3" secondAttribute="top" constant="30" id="jWk-MW-J8b"/>
-                            <constraint firstItem="Px6-Ez-Ti3" firstAttribute="trailing" secondItem="y2T-v1-LI3" secondAttribute="trailing" constant="20" id="ltK-XY-gZZ"/>
-                            <constraint firstItem="MjI-sy-Tlo" firstAttribute="top" secondItem="y2T-v1-LI3" secondAttribute="bottom" constant="28" id="nK0-Jj-HEA"/>
-                            <constraint firstItem="y2T-v1-LI3" firstAttribute="top" secondItem="e5B-3e-LU3" secondAttribute="bottom" constant="21" id="smu-zl-lYE"/>
-                            <constraint firstItem="exD-KA-NGO" firstAttribute="leading" secondItem="Px6-Ez-Ti3" secondAttribute="leading" constant="20" id="tKe-25-iqc"/>
-                            <constraint firstItem="e5B-3e-LU3" firstAttribute="leading" secondItem="Px6-Ez-Ti3" secondAttribute="leading" constant="20" id="wlG-p7-Vai"/>
-                            <constraint firstItem="Px6-Ez-Ti3" firstAttribute="trailing" secondItem="exD-KA-NGO" secondAttribute="trailing" constant="20" id="zq7-Dw-wbg"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Px6-Ez-Ti3"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="New Homework" id="PW5-SP-UvJ"/>
-                    <connections>
-                        <outlet property="titleNewHomeworkTextField" destination="exD-KA-NGO" id="CgJ-JW-vaG"/>
-                        <outlet property="typeNewHomeworkPicker" destination="y2T-v1-LI3" id="nqm-oT-IFH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sHL-C9-ES1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2022" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wDe-4N-b7N">

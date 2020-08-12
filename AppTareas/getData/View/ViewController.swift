@@ -8,47 +8,61 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    @IBOutlet weak var homeworkTableView: UITableView!
-    @IBOutlet weak var porhacerTextField: UILabel!
-    @IBOutlet weak var hechasTextField: UILabel!
-    @IBOutlet weak var TotalTextField: UILabel!
-    @IBOutlet weak var viewCollection: UIView!
-    @IBOutlet weak var totalHomeworksTextField: UILabel!
-    @IBOutlet weak var porhcaerHomeworksTextField: UILabel!
-    @IBOutlet weak var hechasHomeworksTextField: UILabel!
-    @IBAction func newHome(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "cambio")
-        (viewController as? AddHomework)?.delegate = self
-        navigationController?.pushViewController(viewController, animated: true)
-        
-    }
-
+class ViewController: UIViewController, getDataViewProtocol{
+    var presenter: getDataPresenterProtocol?
     private let manager = CoreDataManager.shared
     private var homeworks: [Homeworks] = []
     private var hechas: Int = 0
     private var porHacer: Int = 0
+    @IBOutlet weak var hechasTextField: UILabel!
+    @IBOutlet weak var totalTextField: UILabel!
+    @IBOutlet weak var homeworkTableView: UITableView!
+    @IBOutlet weak var viewCollection: UIView!
+    @IBOutlet weak var porhacerTextFied: UILabel!
+    @IBOutlet weak var totalHomeworksTextField: UILabel!
+    @IBOutlet weak var porhcaerHomeworksTextField: UILabel!
+    @IBOutlet weak var hechasHomeworksTextField: UILabel!
+    @IBAction func newHome(_ sender: Any) {
+        presenter?.goToAddhomework()
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        homeworks = manager.fetchHomeowrks()
+        inicializarViper()
         homeworkTableView.register(UINib(nibName: "HomeworkTableViewCell",bundle: nil),
                                    forCellReuseIdentifier: "HomeworkTableViewCell")
         homeworkTableView.dataSource = self
         porHacer = homeworks.count
-        
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        presenter?.getData()
+    }
+    
+    func inicializarViper()
+    {
+        let view: getDataViewProtocol = self
+        let presenterTempo: getDataPresenterProtocol & getDataInteractorOutputProtocol = getDataPresenter()
+        let interactor: getDataInteractorInputProtocol = getDataInteractor()
+        let wireFrame: getDataWireFrameProtocol = getDataWireFrame()
+        // Connecting
+        view.presenter = presenterTempo
+        presenterTempo.view = view
+        presenterTempo.wireFrame = wireFrame
+        presenterTempo.interactor = interactor
+        interactor.presenter = presenterTempo
+        presenter = presenterTempo
+    }
+    
+    func returnData(tareas: Array<Homeworks>) {
+        homeworks=tareas
         loadHomeWorks()
     }
-
+    
     private func loadHomeWorks() {
-        homeworks = manager.fetchHomeowrks()
         totalHomeworksTextField.text = String(homeworks.count)
         hechasHomeworksTextField.text = String(hechas)
         porHacer = homeworks.count
@@ -61,15 +75,12 @@ protocol CambioPantalla {
     func cambio()
 }
 
-
+//Tabla
 //Celda seleccionada
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-       }
+    }
 }
-
-
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,11 +90,8 @@ extension ViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeworkTableViewCell",
                                                  for: indexPath)
-        
         (cell as? HomeworkTableViewCell)?.delegate = self
         (cell as? HomeworkTableViewCell)?.index = indexPath.item
-        
-        
         if let newCell = cell as? HomeworkTableViewCell {
             DispatchQueue.main.async {
                 let tareas = self.homeworks[indexPath.row]
@@ -96,13 +104,14 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
 }
-
+//tabla
 extension ViewController: CambioPantalla{
     func cambio() {
         homeworkTableView.reloadData()
     }
 }
 
+//Celda Update
 extension ViewController: cambioCelda{
     func cambioSwith(estaprendido: Bool, index: Int) {
         if estaprendido == false{

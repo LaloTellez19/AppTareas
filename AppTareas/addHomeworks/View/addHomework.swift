@@ -14,14 +14,14 @@ enum Types: String, CaseIterable {
     case personal = "Personal"
 }
 
-class AddHomework: UIViewController {
+class AddHomework: UIViewController, addHomeworksViewProtocol{
+    var presenter: addHomeworksPresenterProtocol?
     var typeSelecionado = ""
-    private let manager = CoreDataManager.shared
     var delegate: CambioPantalla!
+    private let manager = CoreDataManager.shared
+    private let types = Types.allCases
     @IBOutlet weak var titleNewHomeworkTextField: UITextField!
-    
     @IBOutlet weak var typeNewHomeworkPicker: UIPickerView!
-    
     @IBAction func addhomework(_ sender: Any)
     {
         if let text = titleNewHomeworkTextField.text, text.isEmpty
@@ -33,22 +33,16 @@ class AddHomework: UIViewController {
         else
         {
             let date = Date()
+            let fechaFinal = ""
             let dateFormetter = DateFormatter()
             dateFormetter.dateStyle = .medium
             let dateiniAdd = dateFormetter.string(from: date)
             let titleAdd: String = titleNewHomeworkTextField.text!
             let typeAdd:String = typeSelecionado
-            manager.createHomework(titulo: titleAdd, tipo: typeAdd, status: true, fecha_creacion: dateiniAdd, fecha_final: "") {
-                self.delegate.cambio()
-                DispatchQueue.main.async {
-                    self.navigationController?.popViewController(animated: true)
-                }
-            }
+            presenter?.addNewHomework(titulo: titleAdd, Tipo: typeAdd, status: true, fechaIni: dateiniAdd, FechaFina: fechaFinal)
+            presenter?.returnHome()
         }
-        
-        
     }
-    private let types = Types.allCases
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,12 +50,10 @@ class AddHomework: UIViewController {
         typeNewHomeworkPicker.delegate = self
         initizalaHideKeyboad()
     }
-    
 }
 
 //teclado
 extension AddHomework{
-    
     func initizalaHideKeyboad()
     {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(

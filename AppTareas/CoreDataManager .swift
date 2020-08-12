@@ -11,11 +11,9 @@ import Foundation
 import CoreData
 
 class CoreDataManager {
-    
     static let shared = CoreDataManager()
     //2.- Creamos una propiedad llamada container de tipo NSPersistentContainer que utilizaremos en los diferentes métodos de la clase.
     private let container : NSPersistentContainer!
-    
     //3.- Asignamos un objeto NSPersistentContainer
     init()
     {
